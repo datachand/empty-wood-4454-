@@ -90,4 +90,12 @@ module.exports = (grunt) ->
 				livereload: true
 
 
-				
+		grunt.loadNpmTasks 'grunt-contrib-clean'
+		grunt.loadNpmTasks 'grunt-contrib-coffee'
+		grunt.loadNpmTasks 'grunt-contrib-watch'
+		grunt.loadNpmTasks 'grunt-contrib-sass'
+		grunt.loadNpmTasks 'grunt-contrib-connect'
+		grunt.loadNpmTasks 'grunt-haml2html'
+
+		grunt.registerTask 'default', ['build', 'connect', 'watch']
+		grunt.registerTask 'build', ['clean', 'coffee:src', 'sass', 'haml']
