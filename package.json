@@ -2,6 +2,8 @@
   "name": "empty-wood-4454-",
   "version": "0.0.0",
   "description": "",
+  "copyright": "2014",
+  "author": "Data Chand <data.chand@gmail.com>",
   "main": "echo \"Error: no main specified\" && exit 1",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
