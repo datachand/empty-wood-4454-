@@ -1,0 +1,17 @@
+{
+  "name": "empty-wood-4454-",
+  "version": "0.0.0",
+  "homepage": "https://github.com/datachand/empty-wood-4454-",
+  "authors": [
+    "Data Chand <data.chand@gmail.com>"
+  ],
+  "license": "MPL 2.0",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
