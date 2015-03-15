@@ -16,6 +16,91 @@
             open: true
           }
         }
+      },
+      clean: {
+        build: {
+          src: ['public/js', 'public/css']
+        }
+      },
+      sass: {
+        src: {
+          options: {
+            style: 'expanded'
+          },
+          files: [
+            {
+              expand: true,
+              cwd: './src',
+              src: ['**/*.scss', '**/*.sass'],
+              dest: 'public/app',
+              ext: '.css'
+            }
+          ]
+        }
+      },
+      coffee: {
+        src: {
+          options: {
+            bare: true,
+            preserve_dirs: true,
+            sourceMap: true
+          },
+          files: [
+            {
+              expand: true,
+              cwd: './src',
+              src: ['**/*.coffee'],
+              dest: 'public/app',
+              ext: '.js'
+            }
+          ]
+        },
+        tests: {
+          options: {
+            bare: true,
+            preserve_dirs: true,
+            sourceMap: true
+          },
+          files: [
+            {
+              expand: true,
+              cwd: './tests',
+              src: ['**/*.coffee'],
+              dest: 'tests',
+              ext: '.js'
+            }
+          ]
+        }
+      },
+      haml: {
+        compile: {
+          files: [
+            {
+              expand: true,
+              cwd: './src',
+              src: ['**/*.haml'],
+              dest: 'public/app',
+              ext: '.html'
+            }
+          ]
+        }
+      },
+      watch: {
+        haml: {
+          files: '<%= haml.compile.src %>',
+          tasks: ['haml']
+        },
+        sass: {
+          files: '<%= sass.compile.files[0].src %>',
+          tasks: ['sass']
+        },
+        coffee: {
+          files: '<%= coffee.compile.src %>',
+          tasks: ['coffee']
+        },
+        options: {
+          livereload: true
+        }
       }
     });
   };
