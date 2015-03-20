@@ -33,7 +33,7 @@ module.exports = (grunt) ->
 					expand: true
 					cwd: './src'
 					src: ['**/*.scss', '**/*.sass']
-					dest: 'public/app'
+					dest: 'public'
 					ext: '.css'
 				]
 
@@ -48,7 +48,7 @@ module.exports = (grunt) ->
 					expand: true
 					cwd: './src'
 					src: ['**/*.coffee']
-					dest: 'public/app'
+					dest: 'public'
 					ext: '.js'
 				]
 			tests:
@@ -71,7 +71,7 @@ module.exports = (grunt) ->
 					expand: true
 					cwd: './src'
 					src: ['**/*.haml']
-					dest: 'public/app'
+					dest: 'public'
 					ext: '.html'
 				]
 
